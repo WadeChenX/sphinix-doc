@@ -273,20 +273,159 @@ demo:
  這是註譯內容2。
 
 
+Image & Figure
+===============
+
+Image
+------
+
+文字內容或段落可以插入圖片元素。
+
+其插入圖片的寫法範例如下：
+
+.. code-block:: reST 
+
+    .. image:: picture.jpeg
+        :height: 100px
+        :width: 200 px
+        :scale: 50 %
+        :alt: alternate text
+        :align: right
+
+圖片的關鍵字如下：
+
+alt: 替換文字。
+    | 當應用程序無法顯示圖片時，會顯示圖片的一個簡短描述。
+height: 高度。
+    | 指定圖片需要的長度，單位可以是px(像素), em, ex, in, cm, mm, pt, pc等。不指定就是原圖片高度。
+    | 這個會跟scale關鍵字一起計算。最後的結果相當於height * scale。
+    | 例如：height為200px，scale為50%, 會等於height為100px但不指定scale(預設100%)。
+width: 寬度。
+    | 指定圖片需要的寬度，單位如height關鍵字。不指定就是原圖片寬度。
+    | 算法如height關鍵字。
+scale: 比例，單位是 % (可寫或不寫)
+    | 縮放因子，預設100%。
+align: 對齊方式。
+    | 可以是"top", "middle", "bottom", "left", "center", 或 "right" 。
+    | 相當於html語法中<img>裡面的align屬性。
+    | 而值: "top"、"middle"、"bottom"用於控常圖片的緃向對齊方式，只對inline圖片有效。
+    | 而值："left"、"center"、"right"用於控制圖片的橫向對齊方式，允許圖片浮動，文字圍繞圖片。
+    | 不過俱體行為仍看瀏覽器或渲染的應用程序而定。
+target: 引用名稱或是連結。
+    | 將圖片變為超連結來使用("可點擊")。參數是URI或是包含 _ 的引用名稱。
 
 
+範例：
+
+.. code-block:: reST 
+
+    格式一： 圖片在非內嵌時的置中對齊。
+
+        .. image:: ../_static/github.png
+            :height: 100px
+            :width: 100px
+            :alt: 這是github logo
+            :align: center
+
+    格式二： 圖片在內嵌時的文繞圖呈現。
+
+        | GitHub Logo: |octocat|。這個logo是一張範例圖片。
+
+    .. |octocat| image:: ../_static/github.png
+        :scale: 50%
+        :alt: 這是github logo
+        :align: top
+    
+    格式三： inline圖片在表格式的情況。
+
+    +------------------------+------------+----------+
+    | Header row, column 1   | Header 2   | Header 3 |
+    +========================+============+==========+
+    | body row 1, column 1   | column 2   | column 3 |
+    +------------------------+------------+----------+
+    | body row 2             |                       |
+    +------------------------+                       |
+    | body row 3             |  |octocat_big|        |
+    +------------------------+                       |
+    | body row 4             |                       |
+    +------------------------+------------+----------+
+
+    .. |octocat_big| image:: ../_static/github_big.jpg
+        :scale: 20%
+        :alt: 這是github big logo
+        :align: top
+
+    格式四： 有連結的圖片。
+
+        | 連結圖片： |link_pic|_
+
+    .. |link_pic| image:: ../_static/github.png
+    .. _link_pic: https://github.com/
+
+        | 連結圖片2： |link2_pic|
+
+    .. |link2_pic| image:: ../_static/github.png
+        :scale: 50%
+        :alt: 這是github logo
+        :target: `HyperLink`_
 
 
+demo:
 
+格式一： 圖片在非內嵌時的置中對齊。
 
+.. image:: ../_static/github.png
+    :height: 100px
+    :width: 100px
+    :alt: 這是github logo
+    :align: center
 
+格式二： 圖片在內嵌時的文繞圖呈現。
 
+    | GitHub Logo: |octocat|。這個logo是一張範例圖片。
 
+.. |octocat| image:: ../_static/github.png
+    :scale: 50%
+    :alt: 這是github logo
+    :align: top
+    
+格式三： inline圖片在表格式的情況。
 
++------------------------+------------+----------+
+| Header row, column 1   | Header 2   | Header 3 |
++========================+============+==========+
+| body row 1, column 1   | column 2   | column 3 |
++------------------------+------------+----------+
+| body row 2             |                       |
++------------------------+                       |
+| body row 3             |  |octocat_big|        |
++------------------------+                       |
+| body row 4             |                       |
++------------------------+------------+----------+
 
+.. |octocat_big| image:: ../_static/github_big.jpg
+    :scale: 20%
+    :alt: 這是github big logo
+    :align: top
 
+格式四： 有連結的圖片。
 
+    | 連結圖片： |link_pic|_ 。連結到github網站
 
+.. |link_pic| image:: ../_static/github.png
+.. _link_pic: https://github.com/
+
+    | 連結圖片2： |link2_pic|。連結到本文的HyperLink標題
+
+.. |link2_pic| image:: ../_static/github.png
+    :scale: 50%
+    :alt: 這是github logo
+    :target: `HyperLink`_
+
+Figure
+------
+
+<缺>
 
 
     
