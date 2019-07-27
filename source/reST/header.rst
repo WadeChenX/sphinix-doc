@@ -39,23 +39,9 @@ Header 的樣式如下：
     H4 -- 標題
     ----------
 
-故：
-
-.. code-block:: reST
-
-    H3測試
-    ======
-
-    H4測試
-    ------
-
 demo:
 
-H3測試
-======
-
-H4測試
-------
+.. image:: ../_static/header.png
 
 .. note::
 
