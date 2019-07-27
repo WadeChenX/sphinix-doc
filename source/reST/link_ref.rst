@@ -437,6 +437,9 @@ align: 對齊方式。
     | 可以是 ``left`` 、 ``center`` 或 ``right`` 。
     | figure的橫向對齊，允許圖片浮動及五字圍繞它。具體行為取決於瀏覽器或其它渲染程式。
 
+figclass: <缺>
+    | <缺>
+    
 figwidth: figure的寬度。
     | 限定使用行的寬度可以是支持的單位(eg: px)，或是寬度百分比。
     | 除了上述的方式，還可以使用``image``，不過這需要 `Python 圖片庫`_ 支援。若指定的圖片不存在或是沒有 `Python 圖片庫`_，則此欄位會忽略。
@@ -461,8 +464,6 @@ figwidth: figure的寬度。
     |The figure's caption should|
     |wrap at this width.        |
     +---------------------------+
-
-
 
 
 範例：
