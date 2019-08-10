@@ -1,5 +1,6 @@
-reST 語法
-#########
+##############
+reST language
+##############
 
 .. toctree::
    :maxdepth: 1     

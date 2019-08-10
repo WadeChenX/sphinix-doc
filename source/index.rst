@@ -13,6 +13,7 @@ Sphinix 說明文件
    installation
    quick-start
    reST/index
+   directive/index
    
 
 Indices and tables
