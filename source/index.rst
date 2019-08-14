@@ -7,13 +7,13 @@ Sphinix 說明文件
 ================================
 
 .. toctree::
-   :maxdepth: 2     
+   :maxdepth: 2
    
    introduction
    installation
    quick-start
    reST/index
-   directive/index
+   directives/index
    
 
 Indices and tables
