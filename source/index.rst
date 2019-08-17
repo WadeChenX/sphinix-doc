@@ -12,6 +12,7 @@ Sphinix 說明文件
    introduction
    installation
    quick-start
+   deploy2readthedoc
    reST/index
    directives/index
    

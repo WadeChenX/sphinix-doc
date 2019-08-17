@@ -71,102 +71,46 @@ Generate Output
     產生pdf文件還需要安裝一些程式套件，這部份要看用哪個作業系統。請參閱相關章節。
 
 
-Export to ReadDoc website through GitHub
-==========================================
+Switch Theme
+================
 
-目錄下的檔案可以讓GitHub的方式來管理。並且將結果輸出至 `ReadTheDoc`_ 網站以便瀏覽。
+當output成html格式後，若不喜歡網頁的外觀， **Sphinx** 提供了非常多的外觀模板來做選擇。所有支援的外觀模板可參考 `sphinx theme`_ 。
 
-.. _ReadTheDoc: https://readthedocs.org/
+.. _sphinx theme: https://www.sphinx-doc.org/en/master/usage/theming.html?highlight=theme#themes
 
-所以這裡便需要先準備：
+可於 *conf.py* 看到一參數：
 
-* GitHub 帳號
-* ReadTheDoc帳號
-* 將最新的檔案提交到GitHub
+.. code-block:: reST 
 
-接下來開始ReadTheDoc跟GitHub的連接。
+    html_theme = "alabaster"
+    
+這是預設值，若想要改成不一樣的風格，譬如說 `python 說明文件`_ 的風格：
 
-.. image:: ./_static/readthedoc_01.png
-    :alt: readthedoc_01
-    :align: center
+.. _python 說明文件: https://docs.python.org/2.7/
 
-在 `ReadTheDoc`_ 的個人網站首頁可以將專案匯入。執行 **Import a Project** 。
+.. code-block:: python 
 
-.. image:: ./_static/readthedoc_02.png
-    :alt: readthedoc_02
-    :align: center
+    html_theme = "classic"
 
-由於我們 **Sphinx說明文件** 是在GitHub 管理，故選擇連接GitHub。執行 **Connect to GitHub** 。
+ReadTheDoc theme
+------------------
 
-.. image:: ./_static/readthedoc_03.png
-    :alt: readthedoc_03
-    :align: center
+若想改成ReadTheDoc提供的theme，可以：
 
-接下來 `ReadTheDoc`_ 要求跟GitHub要求一些權限，這裡選擇開放權限。執行 **Authorize readthedocs** 。
+.. code-block:: bash
 
-.. image:: ./_static/readthedoc_04.png
-    :alt: readthedoc_04
-    :align: center
+    pip install sphinx-rtd-theme
+    
+接著，在 *conf.py* 的檔案，開頭修改
 
-接下來選擇要匯入的專案。 **Sphinx說明文件** 位於 **WadeChenX/sphinx-doc** 。點選加號匯入。
+.. code-block:: python
 
-.. image:: ./_static/readthedoc_05.png
-    :alt: readthedoc_05
-    :align: center
+    import sphinx_rtd_theme
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    .............
+    html_theme = "sphinx_rtd_theme"
 
-對比一下專案資料，選擇 **下一頁** 。
-
-.. image:: ./_static/readthedoc_06.png
-    :alt: readthedoc_06
-    :align: center
-
-這時環境已設定完成。可以開始建置工作了。版本預設是latest，若需要特別的版本號，可以自行編輯。執行 **Build version** 。
-
-.. note::
-
-    | 在匯入專案後，GitHub在Web Hook會增加一些規則，以方便文件更新時通知 `ReadTheDoc`_ 做建置工作。
-    | 由於解說的關係，這邊會先刪除GitHub中關於Web Hook規則。
-
-.. image:: ./_static/readthedoc_07.png
-    :alt: readthedoc_07
-    :align: center
-
-這時系統就會開始建置工作。如果有任何錯誤，可以看到編譯時的錯誤log，以方便修復。
-
-.. image:: ./_static/readthedoc_08.png
-    :alt: readthedoc_08
-    :align: center
-
-如果編譯成功，可以回到 **概況** 頁，直接點選 **View your documentation** 來看到結果。
-
-.. image:: ./_static/readthedoc_09.png
-    :alt: readthedoc_09
-    :align: center
-
-接下來開始連接GitHub。為了讓GitHub在專案內容更新通知 `ReadTheDoc`_ 做建置工作，必須做些設定。
-
-選擇 **管理** 頁，並在左欄選擇 **Integration** ，再右邊執行 **Add integration** 。
-
-.. image:: ./_static/readthedoc_10.png
-    :alt: readthedoc_10
-    :align: center
-
-這時你能看到一條URL，如此種格式： *https://readthedocs.org/api/v2/webhook/<project-name>/<id>/* 
-
-在這個例子是 *https://readthedocs.org/api/v2/webhook/sphinix-doc/94957/* 
-
-把它複製一下。
-
-.. image:: ./_static/readthedoc_11.png
-    :alt: readthedoc_11
-    :align: center
-
-到GitHub的 **Sphinx說明文件** 這個專案下。選擇 **Settings** 頁，再選擇 **Webhooks** ，再將複製好的URL貼到 **Payload URL** ，底下選擇好它的通知事件。此例是 *push* 事件。
-
-設定好後，接下來每次專案更新後，都會觸發 `ReadTheDoc`_ 做建置工作。
-
-
-
+如此就能換成ReadTheDoc風格的theme外觀。
 
 
 
