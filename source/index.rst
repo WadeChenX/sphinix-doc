@@ -16,6 +16,10 @@ Sphinix 說明文件
    reST/index
    directives/index
    
+.. toctree::
+    :hidden:
+    
+    glossary
 
 Indices and tables
 ==================
