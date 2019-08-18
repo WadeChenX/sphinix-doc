@@ -282,6 +282,7 @@ def my_function(my_arg, my_other_arg):
     :param my_other_arg: The second of my arguments.
 
     :returns: A message (just for me, of course).
+    
     \\"\\"\\"
     
 
