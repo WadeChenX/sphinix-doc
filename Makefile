@@ -8,6 +8,15 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 
+docker-web: 
+	@make html BUILDDIR=/tmp/build
+	@rm -rf /var/www/html
+	@ln -s /tmp/build/html /var/www/html
+	@/etc/init.d/apache2 restart
+	@echo Press any key to stop ...
+	@bash -c "read -s -n 1 key"
+
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
