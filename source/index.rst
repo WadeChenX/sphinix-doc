@@ -15,6 +15,7 @@ Sphinix 說明文件
    deploy2readthedoc
    reST/index
    directives/index
+   example_code
    
 .. toctree::
     :hidden:

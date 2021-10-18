@@ -2,6 +2,11 @@
 
 專案結果： https://sphinix-doc.readthedocs.io/en/latest/?
 
+Execute docker command:
+
+apache+html
+docker run  -it --rm -v $(pwd)/sphinix-doc:/doc my_sphinx:0.0.2 docker-web
+
 TODO:
 
 Directives key words的用法

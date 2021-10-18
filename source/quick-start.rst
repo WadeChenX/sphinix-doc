@@ -113,4 +113,53 @@ ReadTheDoc theme
 如此就能換成ReadTheDoc風格的theme外觀。
 
 
+.. _ref_test_label_1:
+
+AutoDoc
+================
+
+.. _ref_test_label_2:
+
+在程式碼中，通常會在文件裡面放入大量的註解。Sphinx支持docstrings的模組擴展。
+
+為了使用autodoc，需要在conf.py加入程式碼找尋路徑：
+
+.. code-block:: python
+
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('../example-code'))
+
+
+接著，在conf.py將extension模組加水來：
+
+.. code-block:: python
+
+    extensions = ["sphinx.ext.autodoc"]
+
+
+如此便啟動此模組來搜尋相對應的程式碼所在地。
+
+詳情請參考 :doc:`example_code`
+
+
+
+Run in Docker image
+=============================
+
+| 使用docker image能讓我們快速看到結果，並且可以是跨平台的(如果平台有支援docker技術)。
+| 這邊使用一docker image: my_sphinx:v0.0.2 來快速犏譯結果及顯示在web上：
+
+.. code-block::
+
+    docker run  -it --rm -v $(pwd)/sphinix-doc:/doc my_sphinx:0.0.2 docker-web
+
+
+
+
+
+
+
+
+
 
