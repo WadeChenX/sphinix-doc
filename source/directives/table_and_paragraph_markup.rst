@@ -16,19 +16,19 @@ code:
 .. code-block:: reST
 
     .. note::
-        
+
         這是一個 **注意** 的段落。
-        
+
 demo:
-    
+
 .. note::
-        
+
     這是一個 **注意** 的段落。
 
-    
+
 warning
 --------
-    
+
 | .. warning::
 |   警告的樣式
 
@@ -37,18 +37,18 @@ code:
 .. code-block:: reST
 
     .. warning::
-        
+
         這是一個 **警告** 的段落。
-        
+
 demo:
-    
+
 .. warning::
-        
+
     這是一個 **警告** 的段落。
-    
+
 versionadded
 --------------
-    
+
 | .. versionadded:: <version>
 |   描述功能是在哪個版本導入。以斜體標示。
 
@@ -63,9 +63,9 @@ code:
         :param my_other_arg: The second of my arguments.
 
         :returns: A message (just for me, of course).
-        
+
         \\"\\"\\"
-    
+
     .. versionadded:: 2.5
 
 demo: 
@@ -99,7 +99,7 @@ code:
         :param my_arg: The first of my arguments.
 
         :returns: A message (just for me, of course).
-        
+
         \\"\\"\\"
 
     .. versionchanged:: 2.6
@@ -112,7 +112,7 @@ def my_function(my_arg):
     :param my_arg: The first of my arguments.
 
     :returns: A message (just for me, of course).
-    
+
     \\"\\"\\"
 
 .. versionchanged:: 2.6
@@ -131,7 +131,7 @@ deprecated
         :param my_arg: The first of my arguments.
 
         :returns: A message (just for me, of course).
-        
+
         \\"\\"\\"
 
     .. deprecated:: 2.7
@@ -144,7 +144,7 @@ def my_function(my_arg):
     :param my_arg: The first of my arguments.
 
     :returns: A message (just for me, of course).
-    
+
     \\"\\"\\"
 
 .. deprecated:: 2.7
@@ -159,7 +159,7 @@ seealso
 
     os.listdir( *path* )
         回傳當下目錄裡的子目錄。
-    
+
     .. seealso:: 
 
         可參照原生python文件：https://docs.python.org/2/library/os.html?highlight=listdir#os.listdir
@@ -168,7 +168,7 @@ demo:
 
 os.listdir( *path* )
     回傳當下目錄裡的子目錄。
-    
+
 .. seealso:: 
 
     可參照原生python文件：https://docs.python.org/2/library/os.html?highlight=listdir#os.listdir
@@ -302,8 +302,8 @@ code:
                  : ["else" ":" `suite`]
                  : ["finally" ":" `suite`]
         try2_stmt: "try" ":" `suite`
-                 : "finally" ":" `suite`    
-    
+                 : "finally" ":" `suite`
+
 
 demo:
 
@@ -314,11 +314,11 @@ demo:
             : ["else" ":" `suite`]
             : ["finally" ":" `suite`]
    try2_stmt: "try" ":" `suite`
-            : "finally" ":" `suite`    
-    
-    
-    
-    
+            : "finally" ":" `suite`
+
+
+
+
 
 
 

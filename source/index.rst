@@ -8,18 +8,19 @@ Sphinix 說明文件
 
 .. toctree::
    :maxdepth: 2
-   
+
    introduction
    installation
    quick-start
    deploy2readthedoc
    reST/index
    directives/index
+   extensions/index
    example_code
-   
+
 .. toctree::
     :hidden:
-    
+
     glossary
 
 Indices and tables

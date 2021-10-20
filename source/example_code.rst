@@ -1,14 +1,14 @@
 Example code for autodoc
 ======================================
 
-example code for google-style
+Example code for google-style
 -----------------------------------
 
-.. automodule:: example_google
+.. automodule:: style.example_google
     :members:
 
-example code for numpy
+Example code for numpy
 -----------------------------------
-.. automodule:: example_numpy
+.. automodule:: style.example_numpy
     :members:
 

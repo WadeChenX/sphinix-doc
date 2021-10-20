@@ -61,7 +61,7 @@ Cross-Referencing arbitrary locations
 
         .. code-block:: reST
 
-            這是參照2: :ref:`test_ref ref_test_label_2`
+            這是參照2: :ref:`test_ref <ref_test_label_2>`
 
 
         demo:
